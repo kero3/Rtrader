@@ -1,0 +1,11 @@
+
+#約定を渡すデータ
+
+currency=10000　#取引通貨：10000通貨
+signal="buy"　　#買いシグナル
+
+today=as.character(format(Sys.time(), "%Y-%m-%d"))
+time=as.POSIXlt(paste0(today," 06:00:00"))　#朝6時が取引時刻
+
+trade_data=data.frame(currency=currency,signal=signal,trade_time=time)　#トレードデータ
+
